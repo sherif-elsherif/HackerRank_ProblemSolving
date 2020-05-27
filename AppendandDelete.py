@@ -16,17 +16,13 @@ def appendAndDelete(s, t, k):
             matched_string = t[0:i]
             break
     print(matched_string)
-    # Check if you can append the missing values
-    if len(t)-len(matched_string) > k:
+
+    if len(t) > len(s) and len(t)-len(matched_string) > k:
+        return 'No'
+    elif len(t) < len(s):
         return 'No'
     else:
         return 'Yes'
-    # Start appending the missing values if you'd like to
-    t_index = len(matched_string)
-    while t_index < len(t):
-        matched_string += t[t_index]
-        t_index += 1
-    return matched_string
 
 
 

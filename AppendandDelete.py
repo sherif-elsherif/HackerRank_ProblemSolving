@@ -5,7 +5,9 @@
 
 
 def appendAndDelete(s, t, k):
-    return ""
+    if abs(len(s)-len(t)) > k:
+        return 'No'
+
 
 
 s = input()
